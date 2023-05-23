@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () async {
                   await FlutterClipboard.copy(text);
 
-                  Scaffold.of(context).showSnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('✓   Copied to Clipboard')),
                   );
                 },
